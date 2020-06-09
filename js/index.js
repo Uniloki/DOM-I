@@ -42,6 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 //NAV BAR
 const navList = document.querySelectorAll('a');
+const navCont = document.querySelector('.container nav')
 navList[0].textContent = siteContent.nav["nav-item-1"];
 navList[1].textContent = siteContent.nav["nav-item-2"];
 navList[2].textContent = siteContent.nav["nav-item-3"];
@@ -49,15 +50,25 @@ navList[3].textContent = siteContent.nav["nav-item-4"];
 navList[4].textContent = siteContent.nav["nav-item-5"];
 navList[5].textContent = siteContent.nav["nav-item-6"];
 
-
-
+const newNavItem1 = document.createElement('a')
+newNavItem1.textContent = "ITEM1";
+newNavItem1.style.color = 'green';
+const newNavItem2 = document.createElement('a')
+newNavItem2.textContent = "ITEM2";
+newNavItem2.style.color = 'green';
+navCont.appendChild(newNavItem1);
+navCont.prepend(newNavItem2);
 
 //CTA HEADER
 const ctaHeader = document.querySelector('.cta-text h1')
 ctaHeader.textContent = siteContent.cta.h1;
 //CTA BUTTON
 const ctaButton = document.querySelector('.cta-text button')
+const ctaText = document.querySelector('.cta-text')
 ctaButton.textContent = siteContent.cta.button;
+
+const newPara = document.createElement('P');
+
 //CTA IMAGE
 const ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent.cta['img-src']);
@@ -67,6 +78,8 @@ ctaImage.setAttribute('src', siteContent.cta['img-src']);
 const headList = document.querySelectorAll('.text-content h4');
 headList[0].textContent = siteContent['main-content']['features-h4'];
 headList[1].textContent = siteContent['main-content']['about-h4'];
+
+
 
 const paraList = document.querySelectorAll('.text-content p');
 paraList[0].textContent = siteContent['main-content']['features-content'];
@@ -99,3 +112,11 @@ contactPara[2].textContent = siteContent['contact']['email'];
 
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
+
+function changeColor(list) {
+  for(let i = 0; 0 < navList.length; i++){
+    navList[i].style.color = 'green';
+  }
+};
+
+changeColor(navList);
