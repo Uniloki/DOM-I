@@ -48,6 +48,6 @@ navList[2].textContent = siteContent.nav["nav-item-3"];
 navList[3].textContent = siteContent.nav["nav-item-4"];
 navList[4].textContent = siteContent.nav["nav-item-5"];
 navList[5].textContent = siteContent.nav["nav-item-6"];
-
+//CTA HEADER
 const ctaHeader = document.querySelector('.cta-text h1')
 ctaHeader.textContent = siteContent.cta.h1;
